@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgeComparison", "AgeCompari
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalcularArea", "CalcularArea\CalcularArea.csproj", "{123AB43F-4957-4D6C-9BC0-6758CF4FCAF9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aula5", "Aula5\Aula5.csproj", "{7F4AF0A0-F2D9-4386-9F27-28C057CAB208}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Piramide", "Piramide\Piramide.csproj", "{071AA2B7-3EB5-4D6C-891F-A6F97A713C3E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{123AB43F-4957-4D6C-9BC0-6758CF4FCAF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{123AB43F-4957-4D6C-9BC0-6758CF4FCAF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{123AB43F-4957-4D6C-9BC0-6758CF4FCAF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F4AF0A0-F2D9-4386-9F27-28C057CAB208}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F4AF0A0-F2D9-4386-9F27-28C057CAB208}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F4AF0A0-F2D9-4386-9F27-28C057CAB208}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F4AF0A0-F2D9-4386-9F27-28C057CAB208}.Release|Any CPU.Build.0 = Release|Any CPU
+		{071AA2B7-3EB5-4D6C-891F-A6F97A713C3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{071AA2B7-3EB5-4D6C-891F-A6F97A713C3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{071AA2B7-3EB5-4D6C-891F-A6F97A713C3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{071AA2B7-3EB5-4D6C-891F-A6F97A713C3E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
