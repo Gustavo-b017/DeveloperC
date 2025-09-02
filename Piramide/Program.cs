@@ -21,7 +21,7 @@ namespace MyApp
 
                 for (int i = 0; i < (2 * linha - 1); i++)
                 {
-                    Console.Write("/|"); // Imprime asteriscos
+                    Console.Write(" * "); // Imprime asteriscos
                 }
 
                 Console.WriteLine(); // Pula para a próxima linha
