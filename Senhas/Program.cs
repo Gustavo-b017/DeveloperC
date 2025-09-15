@@ -25,6 +25,7 @@ namespace MyApp
                 if (numeros[i] == listaNumeros[i])
                 {
                     Console.WriteLine($"Dígito {i + 1} correto");
+                    // listaNumeros.Length - 1 é o último índice do array (e tambem para saber se é o último dígito) 
                     if (i == listaNumeros.Length - 1)
                     {
                         Console.WriteLine("Senha correta");
