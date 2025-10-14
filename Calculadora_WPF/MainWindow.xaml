@@ -6,13 +6,15 @@
         xmlns:local="clr-namespace:Calculadora_WPF"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid RenderTransformOrigin="0.607,0.494">
-        <TextBox x:Name="testeSaida" HorizontalAlignment="Left" Margin="560,373,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="textoSaida_TextChanged"/>
-        <Button x:Name="processor" Content="Somar" HorizontalAlignment="Left" Margin="477,373,0,0" VerticalAlignment="Top" Click="Button_Click"/>
-        <TextBox x:Name="CampoEntrada" HorizontalAlignment="Left" Margin="69,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" Height="51" TextChanged="CampoEntrada_TextChanged"/>
-        <Button x:Name="BtnBuffer" Content="Enter" HorizontalAlignment="Left" Margin="234,102,0,0" VerticalAlignment="Top" Height="51" Width="100" Click="BtnBuffer_Click_1" />
-        <TextBox x:Name="conteudo" HorizontalAlignment="Left" Margin="477,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="203" Height="223"/>
-        <Button x:Name="clear" Content="Clear" HorizontalAlignment="Left" Margin="284,260,0,0" VerticalAlignment="Top" Height="33" Width="61" Click="clear_Click"/>
+    <Grid>
+        <TextBox x:Name="Campo1" HorizontalAlignment="Center" Margin="0,53,0,0" VerticalAlignment="Top" Width="120" Text="Valor1"/>
+        <TextBox x:Name="Campo2" HorizontalAlignment="Center" Margin="0,82,0,0" VerticalAlignment="Top" Width="120" Text="Valor 2"/>
 
+        <TextBox x:Name="Resultado" HorizontalAlignment="Center" Margin="0,167,0,0" VerticalAlignment="Top" Width="120" IsReadOnly="True" Text="Resultado"/>
+
+        <Button x:Name="Somar" Content="+" HorizontalAlignment="Left" Margin="339,114,0,0" VerticalAlignment="Top" Height="22" Width="22" Click="Somar_Click"/>
+        <Button x:Name="Sub" Content="-" HorizontalAlignment="Left" Margin="372,114,0,0" VerticalAlignment="Top" Height="22" Width="22" Click="Sub_Click"/>
+        <Button x:Name="Multiplicar" Content="x" HorizontalAlignment="Left" Margin="406,114,0,0" VerticalAlignment="Top" Height="22" Width="22" Click="Multiplicar_Click"/>
+        <Button x:Name="Divisao" Content="/" HorizontalAlignment="Left" Margin="438,114,0,0" VerticalAlignment="Top" Height="22" Width="22" Click="Divisao_Click"/>
     </Grid>
 </Window>

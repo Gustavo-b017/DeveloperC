@@ -8,40 +8,29 @@ namespace Calculadora_WPF
 {
     internal class CalculadoraCore
     {
-        double[] doubles;
-        int index;
-
-        public CalculadoraCore()
+        public double Somar(double valor1, double valor2)
         {
-            doubles = new double[8];
-            index = 0;
+            return valor1 + valor2;
         }
 
-        /// <summary>
-        /// Função que adiciona um numero ao buffer
-        /// </summary>
-        /// <param name="valor">valor que será armazenado</param>
-        /// <returns>retorna false se buffer cheio</returns>
-        public bool AdicionarBuffer(double valor)
+        public double Subtrair(double valor1, double valor2)
         {
-            if(index >= doubles.Length)
-            {
-                return false;
-            }
-
-            doubles[index] = valor;
-            index++;
-            return true;
+            return valor1 - valor2;
         }
 
-        public double Processor()
+        public double Multiplicar(double valor1, double valor2)
         {
-            double sum = 0;
-            foreach (double d in doubles)
+            return valor1 * valor2;
+        }
+
+        public double Dividir(double valor1, double valor2)
+        {
+            if (valor2 == 0)
             {
-                sum += d;
+                // Lança uma exceção específica para divisão por zero
+                throw new DivideByZeroException("Não é possível dividir por zero.");
             }
-            return sum;
+            return valor1 / valor2;
         }
     }
 }
