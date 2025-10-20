@@ -1,0 +1,18 @@
+﻿<Window x:Class="Cadastro_Alunos.Exibir"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Cadastro_Alunos"
+        mc:Ignorable="d"
+        Title="Exibir" Height="450" Width="800">
+    <Grid>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="265" Margin="72,55,0,0" VerticalAlignment="Top" Width="185">
+            <ListBox x:Name="listafinal1" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="265" Margin="417,55,0,0" VerticalAlignment="Top" Width="243">
+            <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="DataGrid_SelectionChanged"/>
+        </Border>
+
+    </Grid>
+</Window>

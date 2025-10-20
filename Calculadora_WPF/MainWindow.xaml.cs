@@ -82,5 +82,10 @@ namespace Calculadora_WPF
                 Resultado.Text = "Erro";
             }
         }
+
+        private void Campo2_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
