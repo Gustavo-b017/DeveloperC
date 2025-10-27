@@ -1,0 +1,72 @@
+﻿<Window x:Class="PetRegistry.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Pet Registry" Height="520" Width="820"
+        Language="pt-BR">
+    <Grid Margin="12">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="8"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="8"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Formulário -->
+        <Border Padding="10" BorderBrush="#DDD" BorderThickness="1" CornerRadius="6">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="120"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="140"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="Nome:" VerticalAlignment="Center" Margin="0,0,6,0"/>
+                <TextBox x:Name="NomeBox" Grid.Column="1" Width="220" Margin="0,0,16,0" TextChanged="NomeBox_TextChanged"/>
+
+                <TextBlock Text="Idade:" Grid.Column="2" VerticalAlignment="Center" Margin="0,0,6,0" HorizontalAlignment="Right"/>
+                <TextBox x:Name="IdadeBox" Grid.Column="3" Width="60" Margin="0,0,16,0" HorizontalAlignment="Left"/>
+
+                <TextBlock Text="Tipo:" Grid.Column="4" VerticalAlignment="Center" Margin="0,0,6,0" HorizontalAlignment="Left"/>
+                <ComboBox x:Name="TipoCombo" Grid.Column="5" Width="140" SelectedIndex="0">
+                    <ComboBoxItem Content="Cachorro"/>
+                    <ComboBoxItem Content="Gato"/>
+                </ComboBox>
+            </Grid>
+        </Border>
+
+        <Border Grid.Row="1" Background="Transparent"/>
+
+        <!-- DataGrid -->
+        <DataGrid Grid.Row="2"
+                  x:Name="PetsGrid"
+                  ItemsSource="{Binding Pets}"
+                  AutoGenerateColumns="False"
+                  CanUserAddRows="False"
+                  SelectionMode="Extended"
+                  IsReadOnly="True" SelectionChanged="PetsGrid_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding Id}" Width="*" />
+                <DataGridTextColumn Header="Nome" Binding="{Binding Name}" Width="160"/>
+                <DataGridTextColumn Header="Idade" Binding="{Binding Age}" Width="80"/>
+                <DataGridTextColumn Header="Tipo" Binding="{Binding Tipo}" Width="110"/>
+                <DataGridTextColumn Header="Taxa" Binding="{Binding Fee, StringFormat={}{0:C}}" Width="100"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Border Grid.Row="3" Background="Transparent"/>
+
+        <!-- Botões (sem Spacing; usando Margin entre eles) -->
+        <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="Adicionar" Width="110" Click="Adicionar_Click" Margin="0,0,8,0"/>
+            <Button Content="Remover Selecionado(s)" Width="170" Click="Remover_Click" Margin="0,0,8,0"/>
+            <Button Content="Total das Taxas" Width="150" Click="Total_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
